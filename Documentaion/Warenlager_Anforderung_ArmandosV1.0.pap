@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="0D4069D06BC4DC8C">
+  <PROJECT FORMAT="1.00" NAME="Warenlager" AUTHOR="Armando" CREATED="2013.04.21 14:33:09" MODIFIED="2013.07.14 21:37:52">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="Lagerverwaltung Anforderungsablauf" CREATED="2013.04.21 14:33:15" MODIFIED="2013.07.14 21:37:52">
+        <LAYOUT FORMAT="1.00" COLUMNS="6" ROWS="11">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="123">
+                <TEXT><![CDATA[Material in der DB vorhanden]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="122">
+                <TEXT><![CDATA[LagerMenge <= MindestMenge]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="121">
+                <TEXT><![CDATA[Bei größere AnforderungsMenge als LagerMenge wird die Lagermenge ausgegeben und der Rest wird nachbestellt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[Lagerverwaltung Anforderungsablauf]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="2">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Materialanforderung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="3">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Materialvorhanden?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="59">
+                <TEXT><![CDATA[Berechnung der AnforderungsMenge und LagerMenge]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="29">
+                <TEXT><![CDATA[MindestMenge unterschritten?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="261">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="9">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="241">
+                <TEXT><![CDATA[Ausgabe von Material oder Teilmenge]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="10">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="2">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="124">
+                <TEXT><![CDATA[Materialanforderung des Mitarbeiters
+AnforderungsMenge = x]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="4">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="130">
+                <TEXT><![CDATA[Anf.Menge = Anf.Menge - AusgabeMenge
+
+LagerMenge = LagerMenge - AusgabeMenge]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="6">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="192">
+                <TEXT><![CDATA[Bestellung vorhanden?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="7">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="195">
+                <TEXT><![CDATA[BestellMenge ausreichend?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="8">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="264">
+                <TEXT><![CDATA[automatische Bestellung 
+BestellMenge = Anforderungsmenge]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="9">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="266">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="3">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="14">
+                <TEXT><![CDATA[Materialanlegen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="4">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="101">
+                <TEXT><![CDATA[Lieferant vorhanden?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="236">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="6">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="244">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="15">
+                <TEXT><![CDATA[automatische Bestellung 
+BestellMenge = Anforderungsmenge + (MindestMenge + 25%)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="3">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="125">
+                <TEXT><![CDATA[Material in DB anlegen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="4">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="271">
+                <TEXT><![CDATA[Lieferant anlegen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="169">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="6">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="254">
+                <TEXT><![CDATA[Abprüfen da ansonsten bei gleichzeitiger Anforderung von mehreren Mitarbeitern mehrmals MinMenge + 25% bestellt wird]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="7">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="234">
+                <TEXT><![CDATA[Bestellung vorhanden und AnforderungsMenge > (25% von LagerMenge) dann Nachbestellung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="8">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="269">
+                <TEXT><![CDATA[Da schon MindestMenge + 25% bestellt wird reicht die AnforderungsMenge]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="4">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="126">
+                <TEXT><![CDATA[Lieferantendaten erfassen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="172" FROM="14" TO="101" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="120" FROM="29" TO="261" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="265" FROM="195" TO="264" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="115" FROM="6" TO="14" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="270" FROM="271" TO="169" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="129" FROM="59" TO="29" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="155" FROM="101" TO="236" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="267" FROM="266" TO="241" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="263" FROM="195" TO="261" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="165" FROM="15" TO="266" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="164" FROM="241" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="238" FROM="236" TO="244" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="117" FROM="6" TO="59" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="94" FROM="29" TO="192" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="246" FROM="192" TO="244" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="247" FROM="192" TO="195" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="239" FROM="169" TO="236" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="262" FROM="261" TO="241" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="268" FROM="264" TO="266" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="245" FROM="244" TO="15" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="159" FROM="101" TO="271" TEXT="nein" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>
